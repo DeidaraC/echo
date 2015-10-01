@@ -16,11 +16,11 @@ int main(int argc, const char *argv[]) {
     nflag = false;
   }
 
-  if (*argv) {
+  while (*argv) {
     printf("%s", *argv);
-
-    for (size_t i = 2; i < argc; i++) {
-      printf(" %s", *(argv += 1));
+    argv++;
+    if (*argv) {
+      putchar(' ');
     }
   }
 
