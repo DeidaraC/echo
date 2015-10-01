@@ -2,14 +2,12 @@
 #include <stdio.h>
 #include <string.h>
 
-// Don't support the `-e` and `-E` options
 int main(int argc, const char *argv[]) {
-  // the `-n` option, see `man echo`
-  bool nflag;
+  bool nflag; // the `-n` option
 
   argv++;
 
-  if ((argc > 1) && !strcmp(*argv, "-n")) {
+  if ((*argv) && (strcmp(*argv, "-n") == 0)) {
     nflag = true;
     argv++;
   } else {
