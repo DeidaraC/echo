@@ -7,13 +7,13 @@ int main(int argc, const char *argv[]) {
   // the `-n` option, see `man echo`
   bool nflag;
 
-  if (argv[1] && !strcmp(argv[1], "-n")) {
+  if ((argc > 1) && !strcmp(argv[1], "-n")) {
     nflag = true;
   } else {
     nflag = false;
   }
 
-  if (argv[1]) {
+  if (argc > 1) {
     printf("%s", argv[1]);
 
     for (size_t i = 2; i < argc; i++) {
@@ -21,7 +21,7 @@ int main(int argc, const char *argv[]) {
     }
   }
 
-  if (!nflag) {
+  if (nflag == false) {
     putchar('\n');
   }
 
