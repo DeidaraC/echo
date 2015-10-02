@@ -3,7 +3,7 @@
 #include <string.h>
 
 int main(int argc, const char *argv[]) {
-  bool nflag; // the `-n` option
+  bool nflag; // the `-n` flag
 
   argv++;
 
