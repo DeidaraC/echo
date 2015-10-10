@@ -1,7 +1,8 @@
 require 'minitest/autorun'
 
 class TestEcho < Minitest::Test
-  `cc echo.c -o echo.out`
+  CFLAGS = "-std=c99 -Wall"
+  `cc #{CFLAGS} echo.c -o echo.out`
 
   def test_basic_usage
     output = `./echo.out hello, world!`
