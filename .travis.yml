@@ -1,4 +1,6 @@
-language: c
-script: rake
+language: ruby
+rvm:
+  - 2.2.2
+
 notifications:
   email: false
