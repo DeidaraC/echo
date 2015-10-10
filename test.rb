@@ -9,6 +9,11 @@ class TestEcho < Minitest::Test
     assert_equal "hello, world!\n", output
   end
 
+  def test_non_english
+    output = `./echo.out 你好，世界！`
+    assert_equal "你好，世界！\n", output
+  end
+
   def test_single_quotes
     output = `./echo.out 'hello, world!'`
     assert_equal "hello, world!\n", output
