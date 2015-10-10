@@ -1,0 +1,4 @@
+language: c
+script: rake
+notifications:
+  email: false
